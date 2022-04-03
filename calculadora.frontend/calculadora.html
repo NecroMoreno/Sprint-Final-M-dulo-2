@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/calculadora.css" />
   </head>
 
-  <body>
+  <body onload="init();">
     <!--  banner titulo hecho con columnas y filas-->
     <div>
       <div class="row">
@@ -51,85 +51,182 @@
           style="background-color: lightblue"
         >
           <div
-            class="container border rounded border-warning text-white cont-calculadora col-8 bg-dark"
+            class="container border rounded border-warning text-white cont-calculadora col-10 bg-dark"
           >
-            <div class="row text-end"><label>666</label></div>
-            <div class="row text-end"><label>6</label></div>
+            <div class="row text-end">
+              <div class="col-1"><label>></label></div>
+              <div class="col-10">
+              <label id="operando"></label></div>
+            </div>
+            <div class="row text-end">
+              <div class="col-1"><label>></label></div>
+              <div class="col-10">
+              <label id="resultado"></label></div>
+            </div>
           </div>
           <div class="row"><br /></div>
           <div class="container text-center col-12">
             <div class="row pb-1">
               <div class="col-3">
-                <button type="button" class="btn btn-info btn-lg">CE</button>
+                <button type="button" class="btn btn-info btn-lg" id="ceBtn">
+                  CE
+                </button>
               </div>
               <div class="col-3">
-                <button type="button" class="btn btn-info btn-lg">C</button>
+                <button type="button" class="btn btn-info btn-lg" id="cBtn">
+                  C
+                </button>
               </div>
               <div class="col-3">
-                <button type="button" class="btn btn-info btn-lg">←</button>
+                <button type="button" class="btn btn-info btn-lg" id="arrowBtn">
+                  ←
+                </button>
               </div>
               <div class="col-3">
-                <button type="button" class="btn btn-info btn-lg">÷</button>
+                <button
+                  type="button"
+                  class="btn btn-info btn-lg"
+                  id="divideBtn"
+                >
+                  ÷
+                </button>
               </div>
             </div>
 
             <div class="row pt-1 pb-1">
               <div class="col-3">
-                <button type="button" class="btn btn-secondary btn-lg">7</button>
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-lg"
+                  id="sieteBtn"
+                >
+                  7
+                </button>
               </div>
               <div class="col-3">
-                <button type="button" class="btn btn-secondary btn-lg">8</button>
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-lg"
+                  id="ochoBtn"
+                >
+                  8
+                </button>
               </div>
               <div class="col-3">
-                <button type="button" class="btn btn-secondary btn-lg">9</button>
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-lg"
+                  id="nueveBtn"
+                >
+                  9
+                </button>
               </div>
               <div class="col-3">
-                <button type="button" class="btn btn-info btn-lg">×</button>
+                <button
+                  type="button"
+                  class="btn btn-info btn-lg"
+                  id="multiplicaBtn"
+                >
+                  ×
+                </button>
               </div>
             </div>
 
             <div class="row pt-1 pb-1">
-                <div class="col-3">
-                  <button type="button" class="btn btn-secondary btn-lg">4</button>
-                </div>
-                <div class="col-3">
-                  <button type="button" class="btn btn-secondary btn-lg">5</button>
-                </div>
-                <div class="col-3">
-                  <button type="button" class="btn btn-secondary btn-lg">6</button>
-                </div>
-                <div class="col-3">
-                  <button type="button" class="btn btn-info btn-lg">-</button>
-                </div>
+              <div class="col-3">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-lg"
+                  id="cuatroBtn"
+                >
+                  4
+                </button>
               </div>
-
-              <div class="row pt-1 pb-1">
-                <div class="col-3">
-                  <button type="button" class="btn btn-secondary btn-lg">1</button>
-                </div>
-                <div class="col-3">
-                  <button type="button" class="btn btn-secondary btn-lg">2</button>
-                </div>
-                <div class="col-3">
-                  <button type="button" class="btn btn-secondary btn-lg">3</button>
-                </div>
-                <div class="col-3">
-                  <button type="button" class="btn btn-info btn-lg">+</button>
-                </div>
+              <div class="col-3">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-lg"
+                  id="cincoBtn"
+                >
+                  5
+                </button>
               </div>
-
-              <div class="row pt-1">
-                <div class="col-3">
-                  <button type="button" class="btn btn-secondary btn-lg">0</button>
-                </div>
-                <div class="col-3">
-                  <button type="button" class="btn btn-secondary btn-lg">,</button>
-                </div>
-                <div class="col-6">
-                  <button type="button" class="btn btn-info btn-lg" id="btnZero">=</button>
-                </div>
+              <div class="col-3">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-lg"
+                  id="seisBtn"
+                >
+                  6
+                </button>
               </div>
+              <div class="col-3">
+                <button type="button" class="btn btn-info btn-lg" id="restaBtn">
+                  -
+                </button>
+              </div>
+            </div>
 
+            <div class="row pt-1 pb-1">
+              <div class="col-3">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-lg"
+                  id="unoBtn"
+                >
+                  1
+                </button>
+              </div>
+              <div class="col-3">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-lg"
+                  id="dosBtn"
+                >
+                  2
+                </button>
+              </div>
+              <div class="col-3">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-lg"
+                  id="tresBtn"
+                >
+                  3
+                </button>
+              </div>
+              <div class="col-3">
+                <button type="button" class="btn btn-info btn-lg" id="sumaBtn">
+                  +
+                </button>
+              </div>
+            </div>
+
+            <div class="row pt-1">
+              <div class="col-3">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-lg"
+                  id="zeroBtn"
+                >
+                  0
+                </button>
+              </div>
+              <div class="col-3">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-lg"
+                  id="comaBtn"
+                >
+                  ,
+                </button>
+              </div>
+              <div class="col-6">
+                <button type="button" class="btn btn-info btn-lg" id="igualBtn">
+                  =
+                </button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-3 col-sm-0"></div>
@@ -222,5 +319,6 @@
       integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
       crossorigin="anonymous"
     ></script>
+    <script src="assets/js/calculadora.js"></script>
   </body>
 </html>
