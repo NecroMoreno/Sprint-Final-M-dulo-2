@@ -190,6 +190,7 @@ igualBtn.onclick = function () {
   } else if (operacion == "-") {
     var resultadoFinal = parseFloat(operandoA) - parseFloat(operandoAux);
     resultado.textContent = resultadoFinal;
+    bandera2 = true;
   } else if (operacion == "+") {
     var resultadoFinal = parseFloat(operandoA) + parseFloat(operandoAux);
     resultado.textContent = resultadoFinal;
