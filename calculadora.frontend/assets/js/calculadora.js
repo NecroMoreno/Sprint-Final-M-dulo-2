@@ -1,11 +1,11 @@
 //definiendo las variables
 
-var operandoA;
-var operandoB;
+var operandoA = "";
 var operandoAux = "";
 var operacion;
 var bandera = false;
 var bandera2 = false;
+var bandera3 = false;
 
 //no tengo ni idea para qué hace esto el profe si nunca las usa lol
 function init() {
@@ -122,11 +122,29 @@ zeroBtn.onclick = function () {
   }
 };
 
+comaBtn.onclick = function () {
+   // console.log("aca0" + bandera3);
+  if (bandera3 == false) {
+   // console.log("aca1" + bandera);
+    if (bandera == false) {
+      operando.textContent = operando.textContent + ".";
+      bandera3 = true;
+    }
+  //  console.log("aca2" + bandera);
+    if (bandera == true) {
+      operando.textContent = operando.textContent + ".";
+      operandoAux = operandoAux + ".";
+      bandera3 = true;
+    }
+  }
+};
+
 divideBtn.onclick = function () {
   if (bandera != true) {
     operandoA = operando.textContent;
     operando.textContent = operando.textContent + "÷";
     bandera = true;
+    bandera3 = false;
     operacion = "/";
   }
 };
@@ -136,6 +154,7 @@ multiplicaBtn.onclick = function () {
     operandoA = operando.textContent;
     operando.textContent = operando.textContent + "×";
     bandera = true;
+    bandera3 = false;
     operacion = "*";
   }
 };
@@ -145,6 +164,7 @@ restaBtn.onclick = function () {
     operandoA = operando.textContent;
     operando.textContent = operando.textContent + "-";
     bandera = true;
+    bandera3 = false;
     operacion = "-";
   }
 };
@@ -154,6 +174,7 @@ sumaBtn.onclick = function () {
     operandoA = operando.textContent;
     operando.textContent = operando.textContent + "+";
     bandera = true;
+    bandera3 = false;
     operacion = "+";
   }
 };
@@ -176,6 +197,7 @@ function resetear() {
   operacion = "";
   bandera = false;
   bandera2 = false;
+  bandera3 = false;
 }
 
 igualBtn.onclick = function () {
