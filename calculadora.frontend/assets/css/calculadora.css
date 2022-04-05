@@ -5,8 +5,9 @@ body{
 
 .btn {
 
-    min-width: 70px;
-    max-width: 70px;
+    min-width: 60px;    /* xClaudio: Se ajusta tamaño de botoneras. */
+    max-width: 60px;    /* xClaudio: Se ajusta tamaño de botoneras. */
+
   /*  width: 75px;
     height: 45px;
     padding: 1%; */
@@ -14,8 +15,8 @@ body{
 
 #igualBtn{
  
-    min-width: 150px;
-    max-width: 150px;
+    min-width: 128px;   /* xClaudio: Se ajusta tamaño de botonera =. */
+    max-width: 128px;   /* xClaudio: Se ajusta tamaño de botonera =. */
 
 }
 
