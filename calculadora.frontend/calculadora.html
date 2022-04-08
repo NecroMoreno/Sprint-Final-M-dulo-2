@@ -23,6 +23,11 @@
   </head>
 
   <body onload="init();">
+
+    <!-- boton que inicia la calculadura en una ventana minimizada emergente-->
+    <input type="button" class="botonexterno" value="Ventana emergente" 
+    onclick="open('calculadora.html','calculadora', 'width=300,height=300,toolbar=no, statusbar=no,menubar=no,titlebar=no')" />
+
     <!--  banner titulo hecho con columnas y filas-->
     <div>
       <div class="row">
@@ -79,6 +84,7 @@
               </div>
               <div class="col-3">
                 <!--no funciona este botón me dio flojera hacer la lógica-->
+                <!-- queria cambiar este boton a un boton de raiz cuadrada, pero el codigo de js se me hace confuso-->
                 <button type="button" class="btn btn-info btn-lg" id="arrowBtn">
                   ←
                 </button>
@@ -301,7 +307,7 @@
         class="text-center text-white p-3"
         style="background-color: rgba(0, 0, 0, 0.2)"
       >
-        Felipe Moreno, Claudio Vidal y cia || Grupo 2 ||
+        Felipe Moreno, Claudio Vidal, Daniela Vallejos y cia || Grupo 2 ||
         <a class="text-white" href="https://www.awakelab.cl" target="_blank"
           >awakelab</a 
         >|| <a class="text-white" href="https://github.com/NecroMoreno/Sprint-Final-M-dulo-2.git" target="_blank"
